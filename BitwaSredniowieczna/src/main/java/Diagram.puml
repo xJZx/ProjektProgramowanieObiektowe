@@ -1,0 +1,56 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+package "Unit"{
+class Unit
+class Knight
+class Pikeman
+class Swordsman
+}
+package "Nature"{
+class Nature
+class Stone
+}
+package "Team"{
+class Team
+class Blue
+class Red
+}
+
+Knight <|-- Unit
+Pikeman <|-- Unit
+Swordsman <|-- Unit
+
+Stone <|-- Nature
+
+Blue <|-- Team
+Red <|-- Team
+
+class Unit{
+unitSpawner()
+getMove(int)
+isFight()
+isSpace()
+}
+class Knight{
+}
+class Pikeman{
+}
+class Swordsman{
+}
+
+class Nature{
+natureSpawner()
+}
+class Stone{
+}
+
+class Team{
+teamAssigner()
+}
+class Blue{
+}
+class Red{
+}
+
+@enduml
