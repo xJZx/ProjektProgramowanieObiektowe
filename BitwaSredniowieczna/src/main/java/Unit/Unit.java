@@ -1,12 +1,16 @@
 package Unit;
 
 public class Unit {
-    public static void unitSpawner(){
-        //no spawnuje jednostke xd
+    //location
+    int x,y;
+    //velocity
+    int vx,vy;
+    public Unit(){
+        x=(int)(Math.random()*790+0);
+        y=(int)(Math.random()*590+0);
     }
-    public static int getMove(int frequencyOfMovement){
-        // v=1unit/frequencyOfMovement
-        return 0;
+/*    public static void unitSpawner(){
+        //no spawnuje jednostke xd
     }
     public static boolean isFight(){
         //czy jest (Red vs Red/Blue vs Blue) czy Blue vs Red?
@@ -19,5 +23,5 @@ public class Unit {
         //sprawdza czy przy kolejnym wykonaniu ruchu na polu nie stoi kamien
         return cos;
     }
-
+*/
 }
