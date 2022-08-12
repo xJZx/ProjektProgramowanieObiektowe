@@ -1,0 +1,78 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+package "PackageUnit"{
+class Unit
+class Knight
+class Pikeman
+class Swordsman
+}
+package "PackageTeam"{
+class Blue
+class Red
+}
+class MainFrame{
+-count:int
++main():void
++paintComponent(Graphics):void
+-MainFrame()
+-check():void
+-selectPresetBlue():void
+-selectPresetRed():void
+-printResultsToFile():void
+}
+
+Knight <|-- Unit
+Pikeman <|-- Unit
+Swordsman <|-- Unit
+
+class Unit{
+#x:int
+#y:int
+#status:int
+#killCounter:int
++collision():void
+-getBounds():Rectangle
++getStatus():int
++getkillCounter():int
++Unit()
+}
+class Knight{
+-vxK:int
+-vyK:int
+-signKx:int
+-signKy:int
++shapeK():void
+-getMoveKnight():void
++Knight()
+}
+class Pikeman{
+-vxP:int
+-vyP:int
+-signPx:int
+-signPy:int
++shapeP():void
+-getMovePikeman():void
++Pikeman()
+}
+class Swordsman{
+-vxS:int
+-vyS:int
+-signSx:int
+-signSy:int
++shapeS():void
+-getMoveSwordsman():void
++Swordsman()
+}
+class Blue{
++ArrayList<ArmyBlue>
++teamSelectorBlue():void
++paintBlue():void
+}
+class Red{
++ArrayList<ArmyRed>
++teamSelectorRed():void
++paintRed():void
+}
+
+@enduml
